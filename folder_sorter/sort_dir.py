@@ -82,7 +82,8 @@ def show_result(path):
         print(f'{adr[len(path) + 1:]}: {file}')
 
 
-def main(path):
+def main():
+    path = sys.argv[1]
     make_correct_dirs(path)
     sort_dir(path)
     delete_dirs(path)
@@ -90,4 +91,4 @@ def main(path):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main()
